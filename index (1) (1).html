@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For Naina</title>
+</head>
+
+<body style="text-align:center;font-family:Arial;margin-top:100px;">
+
+<h1 id="question">Naina ❤️ Do you love Prince?</h1>
+
+<button onclick="yesClick()">Yes ❤️</button>
+<button onclick="noClick()">No 💔</button>
+
+<div id="final" style="display:none;font-size:30px;margin-top:20px;">
+Thank you cutie ❤️ 🐱
+</div>
+
+<script>
+
+var messages = [
+"Soch lo 😢",
+"Ek baar aur soch lo 🥺",
+"Please haan bol do ❤️",
+"Itna bhav mat khao 😅"
+];
+
+var i = 0;
+
+function noClick() {
+ if(i < messages.length){
+  document.getElementById("question").innerText = messages[i];
+  i++;
+ }
+}
+
+function yesClick() {
+ document.getElementById("question").style.display = "none";
+ document.getElementById("final").style.display = "block";
+}
+
+</script>
+
+</body>
+</html>
